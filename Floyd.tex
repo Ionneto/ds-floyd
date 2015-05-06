@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Complexidade de Algoritmos}
+\author{Ion Neto - 14100836}
+\date{May 2015}
+
+\usepackage{multicol}
+
+\begin{document}
+
+\maketitle
+
+
+\section{FloydModificado}
+\begin{multicols}{2}
+\qquad para i = 1 até n faça	
+
+\qquad\qquad para j = 1 até n faça
+
+\qquad\qquad\qquad A[i,j] <- D[i,j];
+
+\qquad\qquad\qquad R[i,j] <- 0;	
+
+\qquad\qquad fim para			
+
+\qquad fim para			
+\\ 
+\qquad para i = 1 até n faça	
+
+\qquad A[i,i] <- 0;		
+
+\qquad fim para				
+
+\qquad para k = 1 até n faça	
+
+\qquad para i = 1 até n faça
+
+\qquad\qquad para j = 1 até n faça
+
+\qquad\qquad\qquad se A[i,k] + A[k,j] < A[i,j] então
+
+\qquad\qquad\qquad A[i,j] <- A[i,k] + A[k,j];
+
+\qquad\qquad\qquad R[i,j] <- k;		
+
+\qquad\qquad fim para				
+
+\qquad fim para				
+
+fim para			
+
+2n+2 + n*(“dentro do para”)
+
+2n+2 + n*(“dentro do para”)
+
++1
+
++1    
+
+2n+2+n*(2) = 4n+2
+
+2n+2+n*(4n+2) = 4n^2 + 4n + 2 
+
+2n+2 + n*(“dentro do para”)
+
++1
+
+2n+2+n*(1) = 3n+2
+
+2n+2 + n*(“dentro do para”)
+
+2n+2 + n*(“dentro do para”)
+
+2n+2 + n*(“dentro do para”)
+
++2
+
++2
+
++1
+
+2n+2 + n*(5) = 7n+2
+
+2n+2 + n*(7n+2) = 7n^2 + 4n + 2
+
+2n+2 + n*(7n² + 4n +2)
+ = 7n^3 + 4n^2 + 4n +2
+
+
+\end{multicols}
+
+\section{Conclusão}
+
+\\ TOTAL:(4n^2 + 4n + 2 ) + (3n+2) +(7n^3 + 4n^2 + 4n +2) = 7n^3 + 8n^2 + 11n + 6
+
+
+
+\\ COMPLEXIDADE: O(n³)
+
+
+\end{document}
